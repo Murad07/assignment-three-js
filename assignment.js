@@ -59,5 +59,22 @@ function brickCalculator(floorNum) {
   }
 }
 
-var result = brickCalculator(21);
-console.log(result);
+// Problem 4 Tiny Friend
+function tinyFriend(friendList) {
+  if (friendList.length < 1) {
+    return 'Friend List is Empty.';
+  } else {
+    var smallName = friendList[0];
+    for (var i = 0; i < friendList.length; i++) {
+      var currentName = friendList[i];
+      if (currentName.length < smallName.length) {
+        if (currentName.length < 1) {
+          return 'You have an empty friend name';
+        } else {
+          smallName = currentName;
+        }
+      }
+    }
+    return smallName;
+  }
+}
